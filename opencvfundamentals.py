@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 import imutils
 
-print "All packages imported properly!"
+print ("All packages imported properly!")
 
 # Displaying & resizing images
 image = cv2.imread("testudo.jpg")
@@ -20,18 +20,18 @@ cv2.waitKey(0)
 cv2.imwrite("testimage.jpg", image)
 
 # Image shape (dimensions)
-print image.shape
-print "height: %d" % (image.shape[0])
-print "width: %d" % (image.shape[1])
-print "channels: %d" % (image.shape[2])
+print (image.shape)
+print ("height: %d" % (image.shape[0]))
+print ("width: %d" % (image.shape[1]))
+print ("channels: %d" % (image.shape[2]))
 
 # Pixel operations & image slicing
 (b, g, r) = image[0, 0]
-print "Pixel at (0, 0) - Red: %d, Green: %d, Blue: %d" % (r, g, b)
+print ("Pixel at (0, 0) - Red: %d, Green: %d, Blue: %d" % (r, g, b))
 #
 image[0, 0] = (0, 0, 255)
 (b, g, r) = image[0, 0]
-print "Pixel at (0, 0) - Red: %d, Green: %d, Blue: %d" % (r, g, b)
+print ("Pixel at (0, 0) - Red: %d, Green: %d, Blue: %d" % (r, g, b))
 
 corner = image[0:100, 0:100]
 cv2.imshow("Corner", corner)
